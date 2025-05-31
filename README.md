@@ -3,7 +3,14 @@ Página web tipo wiki enfocada en brindar información detallada sobre los perso
 
 ---
 
+## Explicación del Flujo
+- main: Contiene la versión estable y lista para producción
+- develop: Rama principal de desarrollo donde se integran los avances
+- feature/: Ramas temporales para implementar nuevas funcionalidades
+
+
+---
+
 ## Tecnologías usadas
 - React + TypeScript + Vite  
 - ESLint (configuración extendida para TypeScript)  
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) (para Fast Refresh con SWC)  
