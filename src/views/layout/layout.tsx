@@ -3,15 +3,15 @@ import { Header } from './header';
 import { Footer } from './footer';
 
 type LayoutProps = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 export function Layout({ children }: LayoutProps) {
-    return (
-        <>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 }

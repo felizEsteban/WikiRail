@@ -1,0 +1,23 @@
+.personaje-detalle {
+padding: auto;
+}
+
+.personaje-detalle img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+}
+
+.personaje-detalle h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.personaje-detalle p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #dcdcdc;
+  text-align: center;
+}
