@@ -1,4 +1,3 @@
-import "../../views/css/personajeDetail.css";
 import { useParams } from "react-router-dom";
 import { personajes } from "../../models/HSR/personajeData";
 

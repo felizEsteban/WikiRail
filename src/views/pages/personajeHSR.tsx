@@ -1,4 +1,3 @@
-import "../css/personaje.css";
 import { personajes } from "../../models/HSR/personajeData";
 import { CharacterCard } from "../../components/HSR/characterCard";
 

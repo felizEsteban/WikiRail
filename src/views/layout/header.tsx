@@ -1,4 +1,3 @@
-import '../css/header.css';
 import logo from '../../assets/logoWR.svg';
 
 export function Header() {
