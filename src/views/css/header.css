@@ -1,0 +1,123 @@
+/* header.css - Estilos específicos del header */
+.header {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.dark .header {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-self: end;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive para tablets */
+@media (max-width: 992px) {
+  .nav {
+    grid-template-columns: auto 1fr auto;
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .nav-right {
+    gap: 1rem;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav {
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+      "logo toggle"
+      "title title";
+  }
+  
+  .logo-container {
+    grid-area: logo;
+  }
+  
+  .title {
+    grid-area: title;
+    text-align: left;
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+  }
+  
+  .nav-right {
+    grid-area: toggle;
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}

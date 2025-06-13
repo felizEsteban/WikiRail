@@ -3,7 +3,7 @@ import { Layout } from './views/layout/layout';
 import { Home } from './views/pages/home';
 import Personaje  from './views/pages/personajeHSR';
 import { CharacterDetail } from './components/HSR/characterDetail';
-
+import './App.css';
 export function App() {
   return (
     <Layout>

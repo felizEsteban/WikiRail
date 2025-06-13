@@ -1,0 +1,32 @@
+/* home.css */
+
+/* Contenedor principal de la página */
+.home-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos del título */
+.home-title {
+  color: #6200ea; /* Morado profundo */
+  margin-bottom: 20px;
+}
+
+/* Estilos para los párrafos */
+.home-paragraph {
+  font-size: 1.1rem;
+  color: #333333; /* Gris oscuro para texto en modo claro */
+  line-height: 1.5;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+/* Modo oscuro */
+.dark .home-title {
+  color: #B39DDB; /* Morado suave */
+}
+
+.dark .home-paragraph {
+  color: #e0e0e0; /* Texto claro */
+}
