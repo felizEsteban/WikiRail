@@ -19,10 +19,6 @@
   --surface-light: #FAFAFA; /* Gris muy claro para superficies */
   --surface-dark: #1E1E1E; /* Gris oscuro para superficies */
   
-  /* Footer */
-  --footer-background-light: #EEEEEE; /* Gris claro para footer */
-  --footer-background-dark: #1A1A1A; /* Gris muy oscuro para footer */
-  
   /* Botones */
   --button-color-light: var(--primary-color); /* Usamos el primario */
   --button-color-dark: var(--primary-color); /* Mantenemos consistencia */
@@ -58,60 +54,6 @@ body {
   background-color: var(--background-dark);
   color: var(--text-color-dark);
   background-image: radial-gradient(circle at 80% 80%, var(--gradient-dark));
-}
-
-/* Header mejorado */
-.header {
-  background-color: var(--primary-color);
-  padding: 1.25rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.dark .header {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-
-.header .title {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.header .dark-mode-toggle {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.header .dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Footer mejorado */
-.footer {
-  background-color: var(--footer-background-light);
-  color: var(--text-color-light);
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.dark .footer {
-  background-color: var(--footer-background-dark);
-  color: var(--text-color-dark);
 }
 
 /* Botones y enlaces mejorados */
@@ -172,22 +114,8 @@ button:active, .btn:active {
 
 /* Responsividad mejorada */
 @media (max-width: 768px) {
-  .header {
-    padding: 1rem;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .header .title {
-    font-size: 1.5rem;
-  }
-  
   button, .btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
-  }
-  
-  .footer {
-    padding: 1.5rem;
   }
 }
