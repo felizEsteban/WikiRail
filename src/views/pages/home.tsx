@@ -1,101 +1,116 @@
 import '../css/home.css';
-import { personajes } from "../../models/HSR/personajeData";
-import { CharacterCard } from "../../components/HSR/characterCard";
-import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import {
+  FaUserAlt,
+  FaTrophy,
+  FaBook,
+  FaCalculator,
+  FaNewspaper,
+  FaArrowRight
+} from 'react-icons/fa';
+import { IoMdSettings } from 'react-icons/io';
 
 export function Home() {
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState<boolean>(true);
-
-  // Avanzar automáticamente el carrusel cada 3 segundos
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isAutoPlaying) {
-      interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => 
-          prevIndex === personajes.length - 1 ? 0 : prevIndex + 1
-        );
-      }, 3000);
+  // Datos de las tarjetas de navegación
+  const featureCards = [
+    {
+      title: "Personajes",
+      description: "Explora todos los personajes disponibles con estadísticas detalladas",
+      icon: <FaUserAlt size={28} />,
+      path: "/characters",
+      bgColor: "var(--gradient-dark)"
+    },
+    /*
+    {
+      title: "Tier Lists",
+      description: "Descubre las mejores composiciones y valoraciones de personajes",
+      icon: <FaTrophy size={28} />,
+      path: "/tierlists",
+      bgColor: "var(--gradient-dark)"
+    },
+    */
+    {
+      title: "Guías",
+      description: "Aprende estrategias avanzadas y consejos para cada modo de juego",
+      icon: <FaBook size={28} />,
+      path: "/guides",
+      bgColor: "var(--gradient-dark)"
+    },
+        {
+      title: "Equipamiento",
+      description: "Mejores armas, relicarios y conjuntos de artefactos",
+      icon: <IoMdSettings size={28} />,
+      path: "/equipment",
+      bgColor: "var(--gradient-dark)"
+    },
+    /*
+    {
+      title: "Calculadoras",
+      description: "Herramientas para optimizar builds y recursos",
+      icon: <FaCalculator size={28} />,
+      path: "/calculators",
+      bgColor: "var(--gradient-dark)"
+    },
+    */
+    {
+      title: "Noticias",
+      description: "Mantente al día con los últimos eventos y actualizaciones",
+      icon: <FaNewspaper size={28} />,
+      path: "/news",
+      bgColor: "var(--gradient-dark)"
     }
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, personajes.length]);
-
-  const goToPrev = (): void => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prevIndex) => 
-      prevIndex === 0 ? personajes.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = (): void => {
-    setIsAutoPlaying(false);
-    setCurrentIndex((prevIndex) => 
-      prevIndex === personajes.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const goToSlide = (index: number): void => {
-    setIsAutoPlaying(false);
-    setCurrentIndex(index);
-  };
+  ];
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Bienvenido a <span className="brand-accent">WikiRail</span></h1>
-      
-      <div className="carousel-container">
-        <div className="carousel">
-          <button className="carousel-button prev" onClick={goToPrev} aria-label="Anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-          
-          <div className="carousel-slide">
-            <CharacterCard 
-              key={personajes[currentIndex].id} 
-              personaje={personajes[currentIndex]} 
-            />
-          </div>
-          
-          <button className="carousel-button next" onClick={goToNext} aria-label="Siguiente">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        
-        <div className="carousel-dots">
-          {personajes.map((_, index: number) => (
-            <button 
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-              aria-label={`Ir al slide ${index + 1}`}
-            />
-          ))}
-        </div>
+      <div className="hero-section">
+        <h1 className="home-title">Bienvenido a <span className="brand-accent">WikiRail</span></h1>
+        <p className="hero-description">
+          Tu fuente definitiva de información para Honkai Star Rail. Datos actualizados,
+          guías expertas y herramientas para mejorar tu experiencia de juego.
+        </p>
       </div>
 
-      <div className="home-content">
-        <div className="content-card">
-          <p className="home-paragraph">
-            WikiRail es un sitio web dedicado a brindar información completa y detallada sobre personajes, artefactos y
-            mecánicas de juegos interactivos, con un enfoque especial en títulos populares como Genshin Impact y Honkai Star Rail.
-          </p>
-        </div>
-        <div className="content-card">
-          <p className="home-paragraph">
-            Nuestra plataforma está construida con React y Vite, siguiendo el patrón de arquitectura MVC para mantener un
-            código limpio y organizado. Aquí puedes explorar perfiles de personajes, aprender sobre estrategias, y mucho más.
-          </p>
-        </div>
-        <div className="content-card accent">
-          <p className="home-paragraph">
-            ¡Explora, aprende y disfruta de la comunidad WikiRail!
-          </p>
-        </div>
+      <div className="features-grid">
+        {featureCards.map((card, index) => (
+          <Link to={card.path} key={index} className="feature-card" style={{ backgroundColor: card.bgColor }}>
+            <div className="card-icon">{card.icon}</div>
+            <h3 className="card-title">{card.title}</h3>
+            <p className="card-description">{card.description}</p>
+            <div className="card-arrow">
+              <FaArrowRight size={18} />
+            </div>
+          </Link>
+        ))}
       </div>
+
+      <div className="info-sections">
+        <section className="about-section">
+          <h2>Sobre WikiRail</h2>
+          <p>
+            WikiRail es una plataforma creada por fans para fans de Honkai Star Rail. Nuestro equipo de editores
+            trabaja constantemente para mantener la información actualizada con los últimos parches y contenido.
+          </p>
+          <p>
+            ¿Quieres colaborar? Únete a nuestra comunidad y ayuda a mejorar esta wiki para todos los jugadores.
+          </p>
+        </section>
+
+        <section className="update-section">
+          <h2>Última Actualización</h2>
+          <div className="update-card">
+            <h3>Versión 2.3 - "Cielos Desplegados"</h3>
+            <ul>
+              <li>Nuevos personajes: Firefly y Jade</li>
+              <li>Evento limitado "Planos de Batalla"</li>
+              <li>Nueva zona: División de Investigación Secreta</li>
+              <li>Balanceo de personajes y ajustes de juego</li>
+            </ul>
+            <p className="update-date">Publicado: 19 de junio, 2024</p>
+          </div>
+        </section>
+      </div>
+
     </div>
   );
 }

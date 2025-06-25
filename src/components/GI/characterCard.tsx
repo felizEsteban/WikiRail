@@ -1,8 +1,9 @@
-import type { Personaje } from "../../models/HSR/personajeModel";
+import type { Personaje } from "../../models/GI/personajeModel";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import '../../views/css/characterCard.css';
+
 interface Props {
   personaje: Personaje;
 }
@@ -20,8 +21,9 @@ export const CharacterCard = ({ personaje }: Props) => (
     </div>
     <div className="character-info">
       <h2 className="character-name">{personaje.nombre}</h2>
+      <p className="character-elemento">{personaje.elemento} • {personaje.arma}</p>
       <Link 
-        to={`/personajeHSR/${personaje.id}`} 
+        to={`/personajeGI/${personaje.id}`} 
         className="character-link"
       >
         Ver detalles

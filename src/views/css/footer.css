@@ -1,7 +1,5 @@
 /* footer.css */
 .footer {
-  background-color: var(--header-bg);
-  color: var(--text-color);
   padding: 0.8rem 1.5rem;
   transition: all 0.3s ease;
 }
@@ -13,7 +11,7 @@
 }
 
 .footer.light {
-  --header-bg: #f8f9fa;
+  --header-bg: #bbbbbc;
   --text-color: #333333;
   --icon-hover: rgba(0, 0, 0, 0.1);
 }
@@ -38,8 +36,11 @@
 .footer-logo {
   height: 22px;
   width: auto;
-}
 
+}
+footer-logo :hover{
+  filter: drop-shadow(0 0 10px #fff);
+}
 .footer-title {
   font-weight: 600;
   font-size: 1rem;

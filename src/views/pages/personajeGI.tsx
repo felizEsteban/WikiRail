@@ -1,13 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import { personajes } from "../../models/HSR/personajeData";
-import { CharacterCard } from "../../components/HSR/characterCard";
+import { personajes } from "../../models/GI/personajeData";
+import { CharacterCard } from "../../components/GI/characterCard";
 import '../css/personajePage.css';
 
 const PersonajePage = () => {
   const [visibleCharacters, setVisibleCharacters] = useState<number>(12);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Efecto para el infinite scroll
   useEffect(() => {
     const handleScroll = () => {
       if (
@@ -24,8 +23,8 @@ const PersonajePage = () => {
 
   return (
     <div className="personajes-container">
-      <h1 className="personajes-title">Personajes de Honkai Star Rail</h1>
-      <p className="personajes-subtitle">Explora todos los personajes disponibles</p>
+      <h1 className="personajes-title">Personajes de Genshin Impact</h1>
+      <p className="personajes-subtitle">Explora todos los personajes jugables de Teyvat</p>
       
       <div className="personaje-grid" ref={containerRef}>
         {personajes.slice(0, visibleCharacters).map(p => (

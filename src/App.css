@@ -26,6 +26,8 @@
   /* Gradientes */
   --gradient-light: rgba(179, 157, 219, 0.2), rgba(255, 255, 255, 0.8); /* Más sutil */
   --gradient-dark: rgba(124, 77, 255, 0.15), rgba(18, 18, 18, 0.9); /* Más integrado */
+  --gradient-second-light: linear-gradient(135deg, #7e35dd 70%, #b39ddb 100%); /* Modal claro (más contraste) */
+  --gradient-second-dark: linear-gradient(135deg, #473f99 70%, #7c4dff 100%); /* Modal oscuro (más contraste) */
   
   /* Estados */
   --error-color: #FF5252;

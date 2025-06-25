@@ -14,7 +14,7 @@
 }
 
 .header.light {
-  --header-bg: #f8f9fa;
+  --header-bg: #bbbbbc;
   --text-color: #333333;
   --hover-bg: rgba(0, 0, 0, 0.05);
   --border-color: rgba(0, 0, 0, 0.15);
