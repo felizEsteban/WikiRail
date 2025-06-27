@@ -3,7 +3,7 @@ import { Layout } from './views/layout/layout';
 import { Home } from './views/pages/home';
 import PersonajeH from './views/pages/personajeHSR';
 import { CharacterDetailH } from './components/HSR/characterDetail';
-import PersonajeG from './views/pages/personajeGi';
+import PersonajeG from './views/pages/personajeGI';
 import { CharacterDetailG } from './components/GI/characterDetail';
 import NotFound from './views/pages/NotFound';
 import './App.css';
