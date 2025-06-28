@@ -5,6 +5,7 @@ import PersonajeH from './views/pages/personajeHSR';
 import { CharacterDetailH } from './components/HSR/characterDetail';
 import PersonajeG from './views/pages/personajeGI';
 import { CharacterDetailG } from './components/GI/characterDetail';
+import Noticias from './views/pages/Noticias';
 import NotFound from './views/pages/NotFound';
 import './App.css';
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
         <Route path="/personajeHSR/:id" element={<CharacterDetailH />} />
         <Route path="/personajeGI" element={<PersonajeG />} />
         <Route path="/personajeGI/:id" element={<CharacterDetailG />} />
+        <Route path="/Noticias" element={<Noticias/>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

@@ -35,10 +35,10 @@ export function Header() {
     <header className={`header ${isDarkMode ? 'dark' : 'light'}`}>
       <nav className="nav">
         <div className="nav-top">
-          <div className="logo-title-container">
+          <Link to="/" className="logo-title-container">
             <img className="logo" src={logo} alt="WikiRail Logo" />
             <h1 className="title">WikiRail</h1>
-          </div>
+          </Link>
 
           <div className="desktop-nav">
             <div className="nav-links-container">

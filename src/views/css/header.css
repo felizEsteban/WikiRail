@@ -82,6 +82,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logo-title-container:hover {
+  transform: scale(1.07);
+  transition: transform 0.2s ease;
 }
 
 .logo {
@@ -96,6 +102,7 @@
   margin: 0;
   transition: color 0.3s ease;
 }
+
 
 .nav-link {
   color: var(--text-color);

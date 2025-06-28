@@ -14,10 +14,17 @@ export function Home() {
   // Datos de las tarjetas de navegación
   const featureCards = [
     {
-      title: "Personajes",
-      description: "Explora todos los personajes disponibles con estadísticas detalladas",
+      title: "Personajes Honkai Star Rail",
+      description: "Explora todos los personajes de Honkai Star Rail con estadísticas detalladas",
       icon: <FaUserAlt size={28} />,
-      path: "/characters",
+      path: "/personajeHSR",
+      bgColor: "var(--gradient-dark)"
+    },
+    {
+      title: "Personajes Genshin Impact",
+      description: "Explora todos los personajes de Genshin Impact con estadísticas detalladas",
+      icon: <FaUserAlt size={28} />,
+      path: "/personajeGI",
       bgColor: "var(--gradient-dark)"
     },
     /*
@@ -36,7 +43,7 @@ export function Home() {
       path: "/guides",
       bgColor: "var(--gradient-dark)"
     },
-        {
+    {
       title: "Equipamiento",
       description: "Mejores armas, relicarios y conjuntos de artefactos",
       icon: <IoMdSettings size={28} />,
@@ -56,7 +63,7 @@ export function Home() {
       title: "Noticias",
       description: "Mantente al día con los últimos eventos y actualizaciones",
       icon: <FaNewspaper size={28} />,
-      path: "/news",
+      path: "/Noticias",
       bgColor: "var(--gradient-dark)"
     }
   ];
@@ -99,15 +106,17 @@ export function Home() {
         <section className="update-section">
           <h2>Última Actualización</h2>
           <div className="update-card">
-            <h3>Versión 2.3 - "Cielos Desplegados"</h3>
+            <h3>Versión 3.4 - "For the Sun is Set to Die"</h3>
             <ul>
-              <li>Nuevos personajes: Firefly y Jade</li>
-              <li>Evento limitado "Planos de Batalla"</li>
-              <li>Nueva zona: División de Investigación Secreta</li>
-              <li>Balanceo de personajes y ajustes de juego</li>
+              <li><strong>Fecha:</strong> 2 de julio de 2025</li>
+              <li><strong>Nuevo personaje:</strong> Phainon (5★, Físico, Destrucción)</li>
+              <li><strong>Evento limitado:</strong> "To Evermore Burn as the Sun"</li>
+              <li><strong>Colaboración:</strong> *Fate/stay night* (Saber y Archer)</li>
+              <li><strong>Nuevo mapa:</strong> Aedes Elysiae</li>
             </ul>
-            <p className="update-date">Publicado: 19 de junio, 2024</p>
+            <p className="update-date">Publicado: 26 de junio, 2025</p>
           </div>
+
         </section>
       </div>
 
