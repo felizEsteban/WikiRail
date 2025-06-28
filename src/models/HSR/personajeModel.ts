@@ -23,4 +23,9 @@ export interface Personaje {
     talento: string;
     habilidad: string;
   };
+  guia?: {
+    artefactos: { nombre: string; imagen: string }[];
+    conoDeLuz: { nombre: string; imagen: string }[];
+    composicionesEquipo: { personaje: string; imagen: string }[];
+  };
 }

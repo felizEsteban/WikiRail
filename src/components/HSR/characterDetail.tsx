@@ -60,6 +60,43 @@ export const CharacterDetailH = () => {
           </ul>
         </section>
       )}
+
+      {/* Sección de Guía */}
+      {personaje.guia && (
+        <section className="personaje-guia">
+          <h2>Guía</h2>
+
+          <h3>Mejores Artefactos y Ornamentos</h3>
+          <div className="artefactos">
+            {personaje.guia.artefactos.map((artefacto, index) => (
+              <div key={index} className="artefacto">
+                <img src={artefacto.imagen} alt={artefacto.nombre} className="artefacto-img" />
+                <p>{artefacto.nombre}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3>Cono de Luz recomendado</h3>
+          <div className="cono-luz">
+            {personaje.guia.conoDeLuz.map((cono, index) => (
+              <div key={index} className="cono-luz-item">
+                <img src={cono.imagen} alt={cono.nombre} className="cono-luz-img" />
+                <p>{cono.nombre}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3>Mejores Composiciones de Equipo</h3>
+          <div className="composiciones-equipo">
+            {personaje.guia.composicionesEquipo.map((composicion, index) => (
+              <div key={index} className="composicion">
+                <img src={composicion.imagen} alt={composicion.personaje} className="composicion-img" />
+                <p>{composicion.personaje}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 };

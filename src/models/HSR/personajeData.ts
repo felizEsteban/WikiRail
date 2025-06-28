@@ -8,7 +8,7 @@ export const personajes: Personaje[] = [
     elemento: "Hielo",
     via: "Destrucción",
     rareza: 5,
-    imagen: "../../pjs_hsr/jingliu.webp",
+    imagen: "https://homdgcat.wiki/images/avatarshopicon/avatar/1212.png",
     descripcion: "Una ex-general de Xianzhou Luofu con una conexión con la luna y el vacío.",
     tecnica: "Moonlit Slash: Entra en combate con Syzygy.",
     pasiva: "Obtiene Syzygy al usar habilidades, potenciando sus ataques.",
@@ -27,31 +27,23 @@ export const personajes: Personaje[] = [
       talento: "",
       habilidad: "",
     },
+    guia: {
+      artefactos: [
+        { nombre: "Académico perdido en la erudición", imagen: "https://homdgcat.wiki/images/itemfigures/71039.png" },
+        { nombre: "Arena Rutilante", imagen: "https://homdgcat.wiki/images/itemfigures/71022.png" }
+      ],
+      conoDeLuz: [
+        { nombre: "Llama de sangre, enciende mi camino", imagen: "https://homdgcat.wiki/images/lightconemediumicon/23039.png" },
+        { nombre: "Seré mi propia espada", imagen: "https://homdgcat.wiki/images/lightconemediumicon/23014.png" },
+        { nombre: "Un rastro de sangre pasada", imagen: "https://homdgcat.wiki/images/lightconemediumicon/21058.png" }
+      ],
+      composicionesEquipo: [
+        { personaje: "Jingliu", imagen: "https://homdgcat.wiki/images/avatarshopicon/avatar/1212.png" },
+        { personaje: "Sunday", imagen: "https://homdgcat.wiki/images/avatarshopicon/avatar/1313.png" },
+        { personaje: "Tribbie", imagen: "https://homdgcat.wiki/images/avatarshopicon/avatar/1403.png" },
+        { personaje: "Hyacine", imagen: "https://homdgcat.wiki/images/avatarshopicon/avatar/1409.png" }
+      ]
+    }
   },
-  {
-    id: "danheng",
-    nombre: "Dan Heng",
-    elemento: "Viento",
-    via: "Cacería",
-    rareza: 4,
-    imagen: "../../pjs_hsr/danheng.webp",
-    descripcion: "Guardia tranquilo del Astral Express.",
-    tecnica: "Dragón Silencioso: Inicia combate con velocidad aumentada.",
-    pasiva: "Causa más daño a enemigos ralentizados.",
-    habilidades: {
-      atqBasico: "Lanza de la Brisa: Daño de viento a un enemigo.",
-      habilidadBasica: "Embate Aéreo: Daño potenciado si el enemigo está ralentizado.",
-      ulti: "Jinete del Viento: Ataque masivo a un solo objetivo.",
-      talento: "Respiración del Dragón: Más daño si la velocidad es superior.",
-    },
-    habilidadesAdicionales: {
-      hbd1: "Mejora la velocidad tras usar la habilidad.",
-      hbd2: "Mayor probabilidad de crítico.",
-      hbd3: "Reduce el tiempo de recarga del ulti.",
-    },
-    mnemoduende: {
-      talento: "",
-      habilidad: "",
-    },
-  },
+  // Más personajes...
 ];

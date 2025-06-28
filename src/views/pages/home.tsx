@@ -43,13 +43,13 @@ export function Home() {
       path: "/guides",
       bgColor: "var(--gradient-dark)"
     },
-    {
-      title: "Equipamiento",
-      description: "Mejores armas, relicarios y conjuntos de artefactos",
-      icon: <IoMdSettings size={28} />,
-      path: "/equipment",
-      bgColor: "var(--gradient-dark)"
-    },
+    // {
+    //   title: "Equipamiento",
+    //   description: "Mejores armas, relicarios y conjuntos de artefactos",
+    //   icon: <IoMdSettings size={28} />,
+    //   path: "/equipment",
+    //   bgColor: "var(--gradient-dark)"
+    // },
     /*
     {
       title: "Calculadoras",
@@ -73,7 +73,7 @@ export function Home() {
       <div className="hero-section">
         <h1 className="home-title">Bienvenido a <span className="brand-accent">WikiRail</span></h1>
         <p className="hero-description">
-          Tu fuente definitiva de información para Honkai Star Rail. Datos actualizados,
+          Tu fuente definitiva de información para Honkai Star Rail y Genshin Impact. Datos actualizados,
           guías expertas y herramientas para mejorar tu experiencia de juego.
         </p>
       </div>
