@@ -16,8 +16,8 @@ export const CharacterDetailG = () => {
 
       <section className="personaje-info">
         <p><strong>Descripción:</strong> {personaje.descripcion}</p>
-        <p><strong>Elemento:</strong> {personaje.elemento}</p>
-        <p><strong>Arma:</strong> {personaje.arma}</p>
+        <p><strong>Elemento:</strong> <img src={personaje.elemento} alt="elemento" className="character-icon" /></p>
+        <p><strong>Arma:</strong> <img src={personaje.arma} alt="arma" className="character-icon" /></p>
         <p><strong>Región:</strong> {personaje.region}</p>
         <p><strong>Rareza:</strong> {personaje.rareza}⭐</p>
         <p><strong>Técnica:</strong> {personaje.tecnica}</p>
@@ -48,6 +48,42 @@ export const CharacterDetailG = () => {
               <li><strong>HBD3:</strong> {personaje.habilidadesAdicionales.hbd3}</li>
             )}
           </ul>
+        </section>
+      )}
+
+      {personaje.guia && (
+        <section className="personaje-guia">
+          <h2>Guía</h2>
+
+          <h3>Mejores Artefactos</h3>
+          <div className="grid-items">
+            {personaje.guia.artefactos.map((a, index) => (
+              <div key={index} className="guia-item">
+                <img src={a.imagen} alt={a.nombre} />
+                <p>{a.nombre}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3>Armas Recomendadas</h3>
+          <div className="grid-items">
+            {personaje.guia.arma.map((a, index) => (
+              <div key={index} className="guia-item">
+                <img src={a.imagen} alt={a.nombre} />
+                <p>{a.nombre}</p>
+              </div>
+            ))}
+          </div>
+
+          <h3>Mejores Composiciones de Equipo</h3>
+          <div className="grid-items">
+            {personaje.guia.composicionesEquipo.map((c, index) => (
+              <div key={index} className="guia-item">
+                <img src={c.imagen} alt={c.personaje} />
+                <p>{c.personaje}</p>
+              </div>
+            ))}
+          </div>
         </section>
       )}
     </div>

@@ -61,37 +61,36 @@ export const CharacterDetailH = () => {
         </section>
       )}
 
-      {/* Sección de Guía */}
       {personaje.guia && (
         <section className="personaje-guia">
           <h2>Guía</h2>
 
           <h3>Mejores Artefactos y Ornamentos</h3>
-          <div className="artefactos">
+          <div className="grid-items">
             {personaje.guia.artefactos.map((artefacto, index) => (
-              <div key={index} className="artefacto">
-                <img src={artefacto.imagen} alt={artefacto.nombre} className="artefacto-img" />
+              <div key={index} className="guia-item">
+                <img src={artefacto.imagen} alt={artefacto.nombre} />
                 <p>{artefacto.nombre}</p>
               </div>
             ))}
           </div>
 
           <h3>Cono de Luz recomendado</h3>
-          <div className="cono-luz">
+          <div className="grid-items">
             {personaje.guia.conoDeLuz.map((cono, index) => (
-              <div key={index} className="cono-luz-item">
-                <img src={cono.imagen} alt={cono.nombre} className="cono-luz-img" />
+              <div key={index} className="guia-item">
+                <img src={cono.imagen} alt={cono.nombre} />
                 <p>{cono.nombre}</p>
               </div>
             ))}
           </div>
 
           <h3>Mejores Composiciones de Equipo</h3>
-          <div className="composiciones-equipo">
-            {personaje.guia.composicionesEquipo.map((composicion, index) => (
-              <div key={index} className="composicion">
-                <img src={composicion.imagen} alt={composicion.personaje} className="composicion-img" />
-                <p>{composicion.personaje}</p>
+          <div className="grid-items">
+            {personaje.guia.composicionesEquipo.map((comp, index) => (
+              <div key={index} className="guia-item">
+                <img src={comp.imagen} alt={comp.personaje} />
+                <p>{comp.personaje}</p>
               </div>
             ))}
           </div>

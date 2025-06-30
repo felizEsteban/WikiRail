@@ -20,4 +20,9 @@ export interface Personaje {
     hbd2?: string;
     hbd3?: string;
   };
+  guia?: {
+    artefactos: { nombre: string; imagen: string }[];
+    arma: { nombre: string; imagen: string }[];
+    composicionesEquipo: { personaje: string; imagen: string }[];
+  };
 }
