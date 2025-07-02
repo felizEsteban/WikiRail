@@ -1,11 +1,11 @@
 import type { Personaje } from "./personajeModel";
 
 const pj = (id: string): string =>
-  `/GI/gi/UI_AvatarIcon_${id}.png`;
+  `/GI/gi/UI_AvatarIcon_${id}.webp`;
 const elemento = (id: string): string =>
-  `/GI/elements/${id}.png`;
+  `/GI/elements/${id}.webp`;
 const arma = (id: string): string =>
-  `/GI/arma/Skill_${id}.png`;
+  `/GI/arma/Skill_${id}.webp`;
 const iconArtefacto = (id: string): string =>
   `/GI/artefactos/${id}.webp`;
 const iconArma = (id: string): string =>
