@@ -2,13 +2,13 @@ import '../css/home.css';
 import { Link } from 'react-router-dom';
 import {
   FaUserAlt,
-  FaTrophy,
+  // FaTrophy,
   FaBook,
-  FaCalculator,
+  // FaCalculator,
   FaNewspaper,
   FaArrowRight
 } from 'react-icons/fa';
-import { IoMdSettings } from 'react-icons/io';
+// import { IoMdSettings } from 'react-icons/io';
 
 export function Home() {
   // Datos de las tarjetas de navegación

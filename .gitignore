@@ -27,3 +27,8 @@ dist-ssr/
 # Archivos de entorno y configuración
 .env
 .env.local
+
+# Firebase CLI (logs y caché local)
+.firebase/
+firebase-debug.log*
+

@@ -8,6 +8,7 @@ export interface Personaje {
   rareza: number;
   tecnica: string;
   pasiva: string;
+  region: string;
   habilidades: {
     atqBasico: string;
     habilidadBasica: string;

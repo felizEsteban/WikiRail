@@ -19,8 +19,8 @@ export const CharacterDetailH = () => {
 
       <section className="personaje-info">
         <p><strong>Descripción:</strong> {personaje.descripcion}</p>
-        <p><strong>Elemento:</strong> {personaje.elemento}</p>
-        <p><strong>Vía:</strong> {personaje.via}</p>
+        <p><strong>Elemento:      </strong><img src={personaje.elemento} alt="elemento" className="character-icon" /></p>
+        <p><strong>Vía:      </strong><img src={personaje.via} alt="vía" className="character-icon" /></p>
         <p><strong>Rareza:</strong> {personaje.rareza}⭐</p>
         <p><strong>Técnica:</strong> {personaje.tecnica}</p>
         <p><strong>Pasiva:</strong> {personaje.pasiva}</p>

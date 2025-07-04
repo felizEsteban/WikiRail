@@ -50,24 +50,24 @@ const PersonajePage = () => {
 
         <select value={filtroElemento} onChange={e => setFiltroElemento(e.target.value)}>
           <option value="todos">Elemento</option>
-          <option value="Physical">Physical</option>
-          <option value="Fire">Fire</option>
-          <option value="Ice">Ice</option>
-          <option value="Lightning">Lightning</option>
-          <option value="Wind">Wind</option>
-          <option value="Quantum">Quantum</option>
-          <option value="Imaginary">Imaginary</option>
-        </select>
+            <option value="fisico">Físico</option>
+            <option value="fuego">Fuego</option>
+            <option value="hielo">Hielo</option>
+            <option value="rayo">Rayo</option>
+            <option value="viento">Viento</option>
+            <option value="cuantico">Cuántico</option>
+            <option value="imaginario">Imaginario</option>
+          </select>
 
-        <select value={filtroVia} onChange={e => setFiltroVia(e.target.value)}>
-          <option value="todos">Vía</option>
-          <option value="The Destruction">Destruction</option>
-          <option value="The Hunt">Hunt</option>
-          <option value="The Erudition">Erudition</option>
-          <option value="The Harmony">Harmony</option>
-          <option value="The Nihility">Nihility</option>
-          <option value="The Preservation">Preservation</option>
-          <option value="The Abundance">Abundance</option>
+          <select value={filtroVia} onChange={e => setFiltroVia(e.target.value)}>
+            <option value="todos">Vía</option>
+            <option value="destruccion">Destrucción</option>
+            <option value="caceria">Cacería</option>
+            <option value="erudicion">Erudición</option>
+            <option value="armonia">Armonía</option>
+            <option value="nihilidad">Nihilidad</option>
+            <option value="preservacion">Preservación</option>
+            <option value="abundancia">Abundancia</option>
         </select>
       </div>
 

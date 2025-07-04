@@ -3,13 +3,13 @@ import type { Personaje } from "./personajeModel";
 const pj = (id: string): string =>
   `/GI/gi/UI_AvatarIcon_${id}.webp`;
 const elemento = (id: string): string =>
-  `/GI/elements/${id}.webp`;
+  `/GI/elementos/${id}.webp`;
 const arma = (id: string): string =>
-  `/GI/arma/Skill_${id}.webp`;
+  `/GI/arma/${id}.webp`;
 const iconArtefacto = (id: string): string =>
   `/GI/artefactos/${id}.webp`;
 const iconArma = (id: string): string =>
-  `/GI/armas/${id}.webp`;
+  `/GI/weapons/UI_EquipIcon_${id}.webp`;
 
 export const personajes: Personaje[] = [
   {
@@ -36,12 +36,12 @@ export const personajes: Personaje[] = [
     },
     guia: {
       artefactos: [
-        { nombre: "Recuerdos del Bosque", imagen: iconArtefacto("recuerdos_del_bosque") },
-        { nombre: "Sueños Áureos", imagen: iconArtefacto("suenos_aureos") }
+        { nombre: "Recuerdos del Bosque", imagen: iconArtefacto("Recuerdos") },
+        { nombre: "Sueños Áureos", imagen: iconArtefacto("Sueños") }
       ],
       arma: [
-        { nombre: "Mil Sueños Flotando", imagen: iconArma("mil_suenos_flotando") },
-        { nombre: "Oración Perdida a los Vientos Sagrados", imagen: iconArma("oracion_perdida") }
+        { nombre: "Mil Sueños Flotando", imagen: iconArma("Catalyst_Ayus_Awaken") },
+        { nombre: "Oración Perdida a los Vientos Sagrados", imagen: iconArma("Catalyst_Fourwinds_Awaken") }
       ],
       composicionesEquipo: [
         { personaje: "Nahida", imagen: pj("Nahida") },
@@ -75,12 +75,13 @@ export const personajes: Personaje[] = [
     },
     guia: {
       artefactos: [
-        { nombre: "Bruja Carmesí en Llamas", imagen: iconArtefacto("bruja_carmesi") },
-        { nombre: "Reminiscencia de la Purificación", imagen: iconArtefacto("reminiscencia") }
+        { nombre: "Bruja Carmesí en Llamas", imagen: iconArtefacto("Bruja") },
+        { nombre: "Reminiscencia de la Purificación", imagen: iconArtefacto("Reminiscencia") }
       ],
       arma: [
-        { nombre: "Lanza de Espina de Dragón", imagen: iconArma("lanza_espina_dragon") },
-        { nombre: "Lanza de Favonius", imagen: iconArma("lanza_favonius") }
+        { nombre: "Lanza de Espina de Dragón", imagen: iconArma("Pole_Stardust_Awaken") },
+        { nombre: "Lanza de Favonius", imagen: iconArma("Pole_Zephyrus_Awaken") },
+        {nombre: "La Captura", imagen: iconArma("Pole_Mori_Awaken") }
       ],
       composicionesEquipo: [
         { personaje: "Xiangling", imagen: pj("Xiangling") },
