@@ -66,7 +66,7 @@ const PersonajePage = () => {
             <option value="erudicion">Erudición</option>
             <option value="armonia">Armonía</option>
             <option value="nihilidad">Nihilidad</option>
-            <option value="preservacion">Preservación</option>
+            <option value="conservacion">Conservación</option>
             <option value="abundancia">Abundancia</option>
         </select>
       </div>
