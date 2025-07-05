@@ -82,8 +82,8 @@ export const personajes = [
         { nombre: "Glamoth, Frente del Firmamento", imagen: iconOrnamento('glamoth') }
       ],
       conoDeLuz: [
-        { nombre: "A lo largo de la Orilla Pasante", imagen: conoDeLuz('orilla_inalcanzable') },
-        { nombre: "Buenas Noches y Dulces Sueños", imagen: conoDeLuz('buenas_noches_que_duermas_bien') },
+        { nombre: "A lo largo de la Orilla Pasante", imagen: conoDeLuz('en_las_orillas_transitorias') },
+        { nombre: "Buenas Noches, que duermas bien", imagen: conoDeLuz('buenas_noches_que_duermas_bien') },
         { nombre: "Lluvia Incesante", imagen: conoDeLuz('lluvia_incesante') }
       ],
       composicionesEquipo: [
