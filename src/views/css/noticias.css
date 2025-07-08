@@ -1,0 +1,117 @@
+/* Estilos para el contenedor principal */
+.noticias-container {
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 1200px; /* Limita el ancho máximo */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.noticias-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color); /* Morado vibrante */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Descripción general */
+.noticias-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color-light); /* Gris muy oscuro */
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Estilos para la lista de noticias */
+.noticias-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.noticias-container ul li {
+  background-color: var(--background-light); /* Fondo blanco */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.noticias-container ul li strong {
+  font-size: 1.2rem;
+  color: var(--primary-color); /* Morado vibrante */
+}
+
+.noticias-container ul li p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color-light); /* Gris muy oscuro */
+}
+
+/* Estilos para los enlaces dentro de las noticias */
+.noticias-container ul li a {
+  color: var(--secondary-color); /* Naranja acento */
+  text-decoration: none;
+}
+
+.noticias-container ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para el último elemento de la lista */
+.noticias-container ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Para el modo oscuro */
+.dark .noticias-container {
+  background-color: var(--surface-dark); /* Fondo oscuro */
+}
+
+.dark .noticias-container h1 {
+  color: var(--primary-light); /* Morado claro */
+}
+
+.dark .noticias-container p,
+.dark .noticias-container ul li {
+  color: var(--text-color-dark); /* Blanco grisáceo */
+}
+
+.dark .noticias-container ul li {
+  background-color: var(--surface-dark); /* Fondo oscuro */
+}
+
+.dark .noticias-container ul li a {
+  color: var(--secondary-dark); /* Naranja oscuro */
+}
+
+.dark .noticias-container ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para los botones (si se agregan en el futuro) */
+button, .btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-dark); /* Hover de botón */
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+.dark button, .dark .btn {
+  background-color: var(--primary-dark); /* En modo oscuro */
+}

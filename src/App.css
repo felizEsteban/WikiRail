@@ -1,42 +1,123 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Paleta de colores mejorada */
+:root {
+  /* Colores primarios */
+  --primary-color: #7C4DFF; /* Morado vibrante (mejor contraste) */
+  --primary-dark: #5E35B1; /* Morado más oscuro para hover/active */
+  --primary-light: #B39DDB; /* Morado claro para fondos secundarios */
+  
+  /* Colores secundarios */
+  --secondary-color: #FFAB40; /* Naranja acento */
+  --secondary-dark: #FF6D00; /* Naranja oscuro para hover */
+  
+  /* Texto */
+  --text-color-light: #212121; /* Gris muy oscuro (mejor legibilidad) */
+  --text-color-dark: #F5F5F5; /* Blanco ligeramente grisáceo */
+  
+  /* Fondos */
+  --background-light: #FFFFFF; /* Blanco puro */
+  --background-dark: #121212; /* Negro con tono grisáceo */
+  --surface-light: #FAFAFA; /* Gris muy claro para superficies */
+  --surface-dark: #1E1E1E; /* Gris oscuro para superficies */
+  
+  /* Botones */
+  --button-color-light: var(--primary-color); /* Usamos el primario */
+  --button-color-dark: var(--primary-color); /* Mantenemos consistencia */
+  
+  /* Gradientes */
+  --gradient-light: rgba(179, 157, 219, 0.2), rgba(255, 255, 255, 0.8); /* Más sutil */
+  --gradient-dark: rgba(124, 77, 255, 0.15), rgba(18, 18, 18, 0.9); /* Más integrado */
+  --gradient-second-light: linear-gradient(135deg, #7e35dd 70%, #b39ddb 100%); /* Modal claro (más contraste) */
+  --gradient-second-dark: linear-gradient(135deg, #473f99 70%, #7c4dff 100%); /* Modal oscuro (más contraste) */
+  
+  /* Estados */
+  --error-color: #FF5252;
+  --success-color: #4CAF50;
+  --warning-color: #FFC107;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilos globales mejorados */
+body {
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Modo claro */
+body {
+  background-color: var(--background-light);
+  color: var(--text-color-light);
+  background-image: radial-gradient(circle at 80% 80%, var(--gradient-light));
+}
+
+/* Modo oscuro */
+.dark body {
+  background-color: var(--background-dark);
+  color: var(--text-color-dark);
+  background-image: radial-gradient(circle at 80% 80%, var(--gradient-dark));
+}
+
+/* Botones y enlaces mejorados */
+button, .btn {
+  background-color: var(--button-color-light);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-1px);
+}
+
+button:active, .btn:active {
+  transform: translateY(0);
+}
+
+.dark button, .dark .btn {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.dark button:hover, .dark .btn:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Botones secundarios */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.dark .btn-secondary {
+  color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(124, 77, 255, 0.1);
+}
+
+.dark .btn-secondary:hover {
+  background-color: rgba(179, 157, 219, 0.1);
+}
+
+/* Responsividad mejorada */
+@media (max-width: 768px) {
+  button, .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

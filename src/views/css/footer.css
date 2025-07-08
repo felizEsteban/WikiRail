@@ -1,0 +1,136 @@
+/* footer.css */
+.footer {
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer.dark {
+  --header-bg: #1a1a2e;
+  --text-color: #ffffff;
+  --icon-hover: rgba(255, 255, 255, 0.2);
+}
+
+.footer.light {
+  --header-bg: #bbbbbc;
+  --text-color: #333333;
+  --icon-hover: rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.footer-logo {
+  height: 22px;
+  width: auto;
+
+}
+footer-logo :hover{
+  filter: drop-shadow(0 0 10px #fff);
+}
+.footer-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.footer-center p {
+  margin: 0;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0 0.5rem;
+}
+
+.footer-right {
+  display: flex;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.social-icon {
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.social-icon:hover {
+  background-color: var(--icon-hover);
+  transform: scale(1.05);
+}
+
+/* Responsive más compacto */
+@media (max-width: 768px) {
+  .footer {
+    padding: 0.6rem 1rem;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .footer-left, 
+  .footer-right {
+    width: auto;
+  }
+  
+  .footer-center {
+    order: 3;
+    margin-top: 0.3rem;
+  }
+  
+  .footer-right {
+    margin: 0.3rem 0;
+  }
+  
+  .footer-logo {
+    height: 20px;
+  }
+  
+  .footer-title {
+    font-size: 0.9rem;
+  }
+  
+  .footer-center p {
+    font-size: 0.75rem;
+    padding: 0;
+  }
+  
+  .social-icon {
+    font-size: 0.9rem;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 0.5rem;
+  }
+  
+  .footer-logo {
+    height: 18px;
+  }
+  
+  .footer-title {
+    font-size: 0.85rem;
+  }
+}

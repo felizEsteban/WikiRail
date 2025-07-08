@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from './views/layout/layout';
+import { Home } from './views/pages/home';
+import PersonajeH from './views/pages/personajeHSR';
+import { CharacterDetailH } from './components/HSR/characterDetail';
+import PersonajeG from './views/pages/personajeGI';
+import { CharacterDetailG } from './components/GI/characterDetail';
+import Noticias from './views/pages/Noticias';
+import NotFound from './views/pages/NotFound';
+import './App.css';
+export function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/personajeHSR" element={<PersonajeH />} />
+        <Route path="/personajeHSR/:id" element={<CharacterDetailH />} />
+        <Route path="/personajeGI" element={<PersonajeG />} />
+        <Route path="/personajeGI/:id" element={<CharacterDetailG />} />
+        <Route path="/Noticias" element={<Noticias/>}></Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Layout>
+  );
 }
-
-export default App
